@@ -1,0 +1,17 @@
+kind: pipeline
+name: defaul;t
+
+steps:
+- name: build
+  image: nginx
+  commands:
+  - echo "building..."
+- name: publish
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: u_docker
+    password:
+      from_secret: p_docker
+    repo: Kunal0323/nginxhelloworld
+    tags: "demo_1"
