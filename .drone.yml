@@ -13,5 +13,5 @@ steps:
       from_secret: u_docker
     password:
       from_secret: p_docker
-    repo: Kunal0323/nginxhelloworld
+    repo: harness/nginxhelloworld
     tags: "demo_1"
